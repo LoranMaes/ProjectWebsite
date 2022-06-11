@@ -4,9 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./stylesheet.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="./index.js" defer></script>
     <title>Escape Room - Black Box Plane</title>
 </head>
 <body>
-    
+    <header>
+        <a href="#start"><img src="./assets/escape_room 1.svg" class="header_img" alt="header image"></a>
+
+        <button id="hamburger" aria-expanded="false" aria-label="hamburger menu button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#flowchart">Flowchart</a></li>
+                <li><a href="#puzzles">Puzzels</a></li>
+                <li><a href="#endresult">Eindresultaat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>BLACKBOX - ESCAPE ROOM</h1>
+
+        <div class="container" id="start">
+            <div class="cards">
+                <div class="card">
+                    <img src="./assets/puzzle_1.svg" alt="" class="card-img">
+                    <h2 class="card-title">1. Intro</h2>
+                    <hr class="blue">
+                    <p>In de intro kan je zien hoe we tot een algemeen idee zijn bekomen en hoe we dit plan hebben aangepakt.</p>
+                    <button class="blue">Klik hier</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzle_2.svg" alt="" class="card-img">
+                    <h2 class="card-title">2. Puzzels</h2>
+                    <hr class="blue">
+                    <p>Hier kan je onze puzzels vinden. Onze elektrische schema’s staan er ook bij zodat jij onze puzzels kunt nabouwen!</p>
+                    <button class="blue">Klik hier</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzle_3.svg" alt="" class="card-img">
+                    <h2 class="card-title">3. Flowchart</h2>
+                    <hr class="blue">
+                    <p>Bekijk hoe ons project gestructeerd is en hoe we logisch alle puzzels hebben verbonden met elkaar.</p>
+                    <button class="blue">Klik hier</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzle_4.svg" alt="" class="card-img">
+                    <h2 class="card-title">4. Eindresultaat</h2>
+                    <hr class="blue">
+                    <p>Tenslotte zie je het finale resultaat van onze escape room.</p>
+                    <button class="blue">Klik hier</button>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/down.svg" class="down-arrow" alt="">
+        
+        <div id="intro">
+            <h2>Intro</h2>
+            <hr class="blue">
+            <div class="section">
+                <p class="long_text">
+                    <span class="bold">DISCLAIMER: DEZE SITE IS NOG NIET AF AANGEZIEN DE DOOS NOG NIET AF IS</span>
+                    <span class="bold">WEGENS TIJDGEBREK EN ANDERE BELANGRIJKE OPDRACHTEN VOOR WEB, OO & DC IS DEZE HACKATHON OPDRACHT NOG NIET VOLLEDIG AF,
+                        DEZE WEBSITE WORDT HIERNA AFGEMAAKT. OOK DE ELEKTRISCHE SCHEMAS KOMEN ER LATER BIJ.
+                    </span>
+                    <br><br>
+                    Bij het brainstormen leek het ons belangrijk een verhaal te vertellen. De gastspreker had hier vaak op gehamerd dat dit eigenlijk de escape room maakt. Een escape room zonder verhaal, met veel puzzels en teveel denkwerk zou saai zijn, dus dit hebben wij ook proberen implementeren in onze escape room.
+                    Vanaf het moment dat we vonden dat we een goede verhaallijn hadden konden we beginnen met de puzzels te bedenken en zo tot een uiteindelijk mooi eindresultaat te komen.
+                    <br><br><span class="bold">Een vliegtuig is aan het crashen en de bedoeling is om de black box open te maken en er zo achter te komen wie het vliegtuig heeft doen crashen.</span>
+                    <br><br>We vonden het verhaal van een vliegtuig leuk en we vonden het handig dat we hiervoor effectief een soort afgesloten container konden maken en geen "echte" ruimte zoals een lokaal zouden moeten aanpassen.
+                    De puzzels die we in onze escape room bedachten alsook de audio fragmenten zijn een combinatie van bestaande puzzels met originele, zelf uitgewerkte ideëen.
+                    <br>We mogen trots zijn op het eindresultaat dat we zijn bekomen en we hopen dat dit jullie kan inspireren om zelf dit soort project aan te pakken.
+                    <br><br>
+                    <span class="bold">Scroll verder om naar onze puzzels te gaan</span>
+                </p>
+                <div class="pic"></div>
+            </div>
+        </div>
+
+        <h2>Puzzels</h2>
+        <hr class="blue">
+        <div id="puzzles">
+            <div class="cards">
+                <div class="card">
+                    <img src="./assets/puzzles/1.png" alt="" class="card-img">
+                    <h2 class="card-title">Accelerometer</h2>
+                    <hr class="blue">
+                    <p>Probeer de juiste code te vinden aan de hand van een servomotor die gestart wordt met een IR-afstandsbediening.</p>
+                    <button class="blue">Lees meer</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzles/2.png" alt="" class="card-img">
+                    <h2 class="card-title">QR Code</h2>
+                    <hr class="blue">
+                    <p>Verbind de juiste eigenschappen van de bemaningsleden van het neerstortende vliegtuig.</p>
+                    <button class="blue">Lees meer</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzles/3.png" alt="" class="card-img">
+                    <h2 class="card-title">Potentiometer</h2>
+                    <hr class="blue">
+                    <p>Doormiddel van een audio-clue zal je de hoogte van het vliegtuig kunnen bepalen.</p>
+                    <button class="blue">Lees meer</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzles/4.png" alt="" class="card-img">
+                    <h2 class="card-title">Nokia</h2>
+                    <hr class="blue">
+                    <p>De hoofdpiloot zijn telefoon bevat belangrijke informatie! Laadt deze zo snel mogelijk op!</p>
+                    <button class="blue">Lees meer</button>
+                </div>
+                <div class="card">
+                    <img src="./assets/puzzles/5.png" alt="" class="card-img">
+                    <h2 class="card-title">RFID</h2>
+                    <hr class="blue">
+                    <p>Wie heeft het schip gekaapt? Scan het juiste pasje en kom hier!</p>
+                    <button class="blue">Lees meer</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="flowchart">
+            <h2>Flowchart</h2>
+            <hr class="blue">
+            <a href="./pages/flowchart/">
+                <div class="flowchart-cover"></div>
+            </a>
+        </div>
+
+        <div id="endresult">
+            <h2>Eindresultaat</h2>
+            <hr class="blue">
+            <p>We don't have our box finished yet, but this website will be updated when everything's done</p>
+        </div>
+    </main>
+
+    <footer>
+        Copyright &copy; - Hackathon Team 20
+    </footer>
 </body>
 </html>

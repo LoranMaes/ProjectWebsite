@@ -1,0 +1,252 @@
+:root{
+    --linear: linear-gradient(-90deg, #388CEF, #75A8E3);
+    --blue: #388CEF;
+    --primary: #333;
+    --blackShadow: rgba(0, 0, 0, .25)
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Sans-Serif";
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+.white{
+    color: #FFF;
+}
+
+.primary{
+    color: var(--primary)
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1.6rem;
+    box-shadow: 0 4px 4px 0 var(--blackShadow);
+}
+
+header .header_img{
+    width: 4rem;
+    height: 4rem;
+}
+
+header nav{
+    top: 5.6rem;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    height: calc(100vh - 5.6rem);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    transition: all 500ms;
+}
+
+#hamburger[aria-expanded=false] + nav{
+    transform: translateX(100vw);
+    transition: all 500ms;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5.2rem;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+nav ul a{
+    color: var(--primary);
+}
+
+#hamburger{
+    background: none;
+    border: none;
+    width: 3rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#hamburger span{
+    width: 100%;
+    height: 3px;
+    border-radius: 5rem;
+    background: var(--primary);
+    transition: all 250ms;
+}
+
+#hamburger[aria-expanded=true] span:nth-child(2){
+    width: 0;
+    opacity: 0;
+    transition: all 250ms;
+}
+
+#hamburger[aria-expanded=true] span:nth-child(1){
+    transform: rotate(45deg) translateY(.8rem);
+}
+
+#hamburger[aria-expanded=true] span:nth-child(3){
+    transform: rotate(-45deg) translateY(-.8rem);
+}
+
+h1{
+    text-align: center;
+}
+
+span.bold{
+    font-weight: 600;
+}
+
+hr.blue{
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5rem;
+    width: 5rem;
+    height: 4px;
+    margin: 0;
+}
+
+button.blue{
+    width: fit-content;
+    border-radius: 5rem;
+    border: none;
+    font-size: 1.6rem;
+    padding: .75rem 2.4rem;
+    margin: 0 auto;
+    font-weight: 600;
+    color: #FFF;
+    background-color: var(--blue);
+}
+
+.container,
+#puzzles{
+    background: var(--linear);
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 2.4rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3.6rem 1.6rem;
+    box-shadow: 0 4px 4px 0 var(--blackShadow);
+    border-radius: 1.6rem;
+    width: fit-content;
+    max-width: 27.5rem;
+}
+
+.card img.card-img{
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.down-arrow{
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#intro,
+#puzzles,
+#flowchart,
+#endresult{
+    padding: 0 2.4rem;
+    padding-bottom: 3.6rem;
+}
+
+#intro ~ hr.blue{
+    margin: 0 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+#intro + h2{
+    padding: 0 2.4rem
+}
+
+.section div.pic{
+    background-image: url("./assets/box/1.jpg");
+    width: 85%;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 4px 0 var(--blackShadow);
+}
+
+#puzzles .card hr{
+    margin: 0 auto;
+}
+
+#puzzles .card img.card-img{
+    border-radius: 1rem;
+    width: 100%;
+}
+
+footer{
+    box-shadow: 0 -4px 4px 0 var(--blackShadow);
+    width: 100vw;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.2rem 2.4rem;
+}
+
+#flowchart .flowchart-cover{
+    position: relative;
+    background-image: url("./assets/flowdiagram.svg");
+    width: 25rem;
+    height: 25rem;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2.4rem;
+}
+
+#flowchart .flowchart-cover::after{
+    position: absolute;
+    content: "Click here to see the whole flowchart";
+    background: var(--blackShadow);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#flowchart .flowchart-cover a{
+    width: 100%;
+    height: 100%
+}
