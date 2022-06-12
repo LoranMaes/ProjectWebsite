@@ -38,7 +38,7 @@ header{
     position: relative;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1.6rem;
+    padding: .75rem 5.4rem;
     box-shadow: 0 4px 4px 0 var(--blackShadow);
 }
 
@@ -249,4 +249,114 @@ footer{
 #flowchart .flowchart-cover a{
     width: 100%;
     height: 100%
+}
+
+@media screen and (min-width: 800px) {
+    h2{
+        font-size: 2.8rem;
+    }
+
+    #hamburger{
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    #hamburger[aria-expanded=false] + nav{
+        position: relative;
+        flex-direction: row;
+        top: unset;
+        left: unset;
+        transform: none;
+        height: fit-content;
+        justify-content: flex-end;
+    }
+
+    nav ul{
+        flex-direction: row;
+    }
+
+    nav ul li{
+        font-size: 1.6rem;
+    }
+
+    #intro .section{
+        display: flex;
+        gap: 3.6rem;
+        justify-content: space-between;
+    }
+
+    #intro .section p.long_text{
+        max-width: 65rem;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .section div.pic{
+        height: 35rem;
+        max-width: 55rem;
+    }
+
+    button{
+        transition: all 200ms;
+        box-shadow: 0 0 4px 0 var(--blackShadow);
+        cursor: pointer;
+    }
+    
+    button.blue:hover{
+        box-shadow: 0 4px 4px 0 var(--blackShadow);
+        transform: translateY(.15rem) scale(1.02);
+        transition: all 200ms;
+    }
+
+    nav ul a{
+        text-decoration: none;
+    }
+
+    #flowchart .flowchart-cover{
+        margin: 0;
+        margin-top: 2.4rem;
+        border-radius: 1.6rem;
+        transition: all 350ms;
+        border-radius: 1rem;
+    }
+
+    #flowchart .flowchart-cover::after{
+        display: flex;
+        align-items: center;
+        height: 25%;
+        border-radius: 1.6rem;
+        transition: all 350ms;
+    }
+
+    #flowchart .flowchart-cover:hover::after{
+        height: 100%;
+        transition: all 350ms;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #intro{
+        margin-top: 32rem;
+    }
+
+    #start{
+        position: relative;
+        height: 35rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex
+    }
+
+    #start .cards{
+        top: 7.2rem;
+        position: absolute;
+        justify-content: center;
+        display: flex;
+    }
 }
