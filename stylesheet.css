@@ -31,6 +31,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 100vh;
 }
 
 header{
@@ -251,6 +252,21 @@ footer{
     height: 100%
 }
 
+.img-gallery{
+    padding: 2.4rem 0;
+    display: flex;
+    gap: 2.4rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+}
+
+.img-gallery img{
+    width: 75%;
+    scroll-snap-align: center;
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 4px 0 var(--blackShadow);
+}
+
 @media screen and (min-width: 800px) {
     h2{
         font-size: 2.8rem;
@@ -336,6 +352,29 @@ footer{
     #flowchart .flowchart-cover:hover::after{
         height: 100%;
         transition: all 350ms;
+    }
+
+    .img-gallery{
+        max-width: 1280px;
+        flex-wrap: wrap;
+        overflow: unset;
+        justify-content: space-between;
+    }
+
+    .img-gallery img{
+        height: 30rem;
+        width: auto;
+        transition: 200ms;
+    }
+
+    .img-gallery img:hover{
+        transform: scale(1.1);
+        transition: 350ms;
+    }
+    #flowchart-big{
+        width: 30%;
+        margin: 0 auto;
+        padding: 2.4rem 0;
     }
 }
 

@@ -23,4 +23,31 @@
     toEndresult.addEventListener("click", () => {
         window.scrollTo(0, endresult)
     })
+
+    //GO TO PAGES
+    const pageAccel = document.querySelector("#pageAccel")
+    const pageQR = document.querySelector("#pageQR")
+    const pagePot = document.querySelector("#pagePot")
+    const pageNokia = document.querySelector("#pageNokia")
+    const pageRFID = document.querySelector("#pageRFID")
+
+    pageAccel.addEventListener("click", () => {
+        window.location = "./pages/accelerometer/"
+    })
+
+    pageQR.addEventListener("click", () => {
+        window.location = "./pages/qr/"
+    })
+
+    pagePot.addEventListener("click", () => {
+        window.location = "./pages/potentiometer/"
+    })
+
+    pageNokia.addEventListener("click", () => {
+        window.location = "./pages/nokia/"
+    })
+
+    pageRFID.addEventListener("click", () => {
+        window.location = "./pages/rfid/"
+    })
 })()

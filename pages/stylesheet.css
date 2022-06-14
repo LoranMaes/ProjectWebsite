@@ -1,0 +1,46 @@
+img.scheme{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 4px 0 var(--blackShadow);
+}
+
+main{
+    justify-content: flex-start;
+    align-items: center;
+}
+
+p.long_text{
+    margin-top: 0;
+    padding: 1.6rem;
+}
+
+button.blue{
+    margin-bottom: 2.4rem;
+}
+
+a{
+    color: var(--primary);
+    margin-bottom: 2.4rem;
+}
+
+/* NOG RESPONSIVE MAKEN */
+@media screen and (min-width: 800px) {
+    main{
+        align-items: flex-start;
+        padding: clamp(1rem, 8vw, 4rem);
+    }
+
+    img.scheme{
+        margin: 0;
+        margin-top: 2.4rem;
+        margin-bottom: 2.4rem;
+        width: 45rem;
+    }
+
+    p.long_text{
+        padding-left: 0;
+    }
+}
